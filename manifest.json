@@ -1,14 +1,19 @@
 {
   "manifest_version": 2,
 
-  "name": "Card Numbers for Trello",
-  "version": "2.0.0",
+  "name": "Card Numbers for Trello, Flyclops Style",
+  "version": "2.2.1",
   "description": "Show the card numbers on trello.com for easier communication in a team",
+  "permissions": [ "https://trello.com/*" ],
 
   "content_scripts": [
     {
       "matches": ["https://trello.com/*"],
       "css": ["override.css"],
+      "js": [
+        "jquery-1.11.1.min.js",
+        "myscript.js"
+      ],
       "all_frames": true
     }
   ]
